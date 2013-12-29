@@ -6,10 +6,10 @@
 #include <xercesc/util/PlatformUtils.hpp>
 // Other include files, declarations, and non-Xerces-C++ initializations.
 
-#include "incl/InputData.h"
-#include "incl/OutputData.h"
+#include "InputData.h"
+#include "OutputData.h"
 
-#include "incl/AStr.h"
+#include "AStr.h"
 
 #if defined(XERCES_NEW_IOSTREAMS)
     #include <iostream>
@@ -17,7 +17,7 @@
     #include <iostream.h>
 #endif
 
-#include "incl/Trace.h"
+#include "Trace.h"
 
 XERCES_CPP_NAMESPACE_USE
 using namespace std;
