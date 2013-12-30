@@ -6,26 +6,18 @@ include( ../common.pri )
 
 TEMPLATE = app
 
-CONFIG  *= link_prl xml
+CONFIG  *= link_prl console
 
 CONFIG -= qt
 
 TARGET = Fibonacci
 
-win32 {
-	DEFINES *= UNICODE
-}
+DEFINES *= XERCES_STATIC_LIBRARY
 
 INCLUDEPATH += $$LIB_CPPUNIT_DIR_INC
 INCLUDEPATH += $$LIB_XERCES_DIR_INC
 INCLUDEPATH += $$LIB_CORE_DIR_INC
 INCLUDEPATH += $$APP_FIBO_DIR_INC
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/dom
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/dom/impl
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/sax
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util/MsgLoaders/InMemory
-INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/validators/schema/identity
 
 CONFIG(debug,debug|release) {
 	LIBS *= -L"$$LIB_CPPUNIT_DIR_DBG"
@@ -65,6 +57,10 @@ CONFIG(debug,debug|release) {
 LIBS *= -lcppunit
 LIBS *= -lxerces
 LIBS *= -lcore
+
+win32 {
+	LIBS*= -lAdvapi32
+}
 
 #Include file(s)
 include(fibonacci.pri)
