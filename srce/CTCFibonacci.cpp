@@ -1,8 +1,6 @@
 // CTCFibonacci.cpp : Defines the entry point for the console application.
 //
 	
-#include "stdafx.h"
-
 #include <xercesc/util/PlatformUtils.hpp>
 // Other include files, declarations, and non-Xerces-C++ initializations.
 
@@ -23,7 +21,7 @@ XERCES_CPP_NAMESPACE_USE
 using namespace std;
 using namespace core::tools;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	SetTraceLevel( TraceDetail );
 
