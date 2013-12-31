@@ -10,7 +10,7 @@ CONFIG  *= link_prl console
 
 CONFIG -= qt
 
-TARGET = Fibonacci
+TARGET = fibonacci
 
 DEFINES *= XERCES_STATIC_LIBRARY
 
