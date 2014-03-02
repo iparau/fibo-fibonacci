@@ -1,9 +1,12 @@
 /*.user
 /Debug
+/debug
 /*.vcxproj
 /*.filters
 /*.Debug
 /*.Release
+/Release
 /release
 /WinMakefile
 /LinMakefile
+/Makefile

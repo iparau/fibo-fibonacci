@@ -21,8 +21,13 @@ XERCES_CPP_NAMESPACE_USE
 using namespace std;
 using namespace core::tools;
 
+#define Q_UNUSED(arg) (void)arg;
+
 int main(int argc, char* argv[])
 {
+    Q_UNUSED(argc);
+    Q_UNUSED(argv);
+
 	SetTraceLevel( TraceDetail );
 
 	try {
